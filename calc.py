@@ -1,2 +1,4 @@
 class Calc:
-    pass
+    @staticmethod
+    def get_zegop(a):
+        return a * a
