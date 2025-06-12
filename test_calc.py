@@ -2,8 +2,10 @@ import pytest
 from calc import Calc
 
 def test_sample():
-    pass
-
+    calc = Calc()
+    assert calc.get_sumsum(1, 2, 3) == 6
+    assert calc.get_sumsum(5, -1, 2.0) == 6.0
+    
 @pytest.fixture
 def calc():
     calc = Calc()
@@ -31,7 +33,6 @@ def test_division():
     ret = sut.get_divide(4, 2)
     assert ret == 2
 
-
 def test_get_nzegop():
     result1 = Calc().get_nzegop(2, 3)
     result2 = Calc().get_nzegop(3, 2)
@@ -39,7 +40,6 @@ def test_get_nzegop():
     assert result1 == 8
     assert result2 == 9
     assert result3 == 64
-
 
 def test_get_sum_1():
     # arrange
