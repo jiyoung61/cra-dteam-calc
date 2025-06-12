@@ -2,7 +2,8 @@ from logging import raiseExceptions
 
 
 class Calc:
-
+    def get_minus(self, a:float, b:float):
+        return float(a) - float(b)
 
     def get_divide(self, a, b):
         if b == 0:
@@ -14,4 +15,3 @@ class Calc:
 
     def get_sum(self, a, b):
         return  a + b
-
